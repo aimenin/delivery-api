@@ -4,7 +4,9 @@
   "description": "delivery api app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon -r dotenv/config ./src/index.js",
+    "server": "node -r dotenv/config ./src/index.js",
+    "start-docker": "docker run -it --rm -v \"%cd%:/code\" -p 3000:3000 node /bin/bash"
   },
   "author": "",
   "license": "ISC",
